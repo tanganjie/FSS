@@ -24,7 +24,7 @@ import cn.edu.bistu.FileSecurity.util.Tools;
  * @author sunxinwei
  *
  */
-@Path("/hello")
+@Path("/userinfo")
 public class Userinfo {
 	static Logger logger = Logger.getLogger(Userinfo.class.getName());
 	
