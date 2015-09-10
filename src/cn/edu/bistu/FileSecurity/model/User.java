@@ -2,43 +2,77 @@
  * 
  */
 package cn.edu.bistu.FileSecurity.model;
+
+import org.bson.Document;
+
 /**
  * @author sunxinwei
  *
  */
 public class User {
-	private int id;
+	private String _id;
 	private String username;
 	private String password;
 	private String nickname;
 	private String email;
+	
+	public User() {
+		
+	}
+	
 	/**
-	 * @param id
+	 * @param _id
 	 * @param username
 	 * @param password
 	 * @param nickname
 	 * @param email
 	 */
-	public User(int id, String username, String password, String nickname,
+	public User(String _id, String username, String password, String nickname,
 			String email) {
 		super();
-		this.id = id;
+		this._id = _id;
 		this.username = username;
 		this.password = password;
 		this.nickname = nickname;
 		this.email = email;
 	}
-	/**
-	 * @return the id
+	
+	public Document parseMongoDoc(){
+		return new Document().append("_id", _id)
+				.append("username", username)
+				.append("password", password)
+				.append("nickname", nickname)
+				.append("email", email);
+	}
+	public void parseUser(Document doc){
+		this._id = doc.getString("_id");
+		this.username = doc.getString("username");
+		this.password = doc.getString("password");
+		this.nickname = doc.getString("nickname");
+		this.email = doc.getString("email");
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
 	 */
-	public int getId() {
-		return id;
+	@Override
+	public String toString() {
+		return "User [id=" + _id + ", username=" + username + ", password="
+				+ password + ", nickname=" + nickname + ", email=" + email
+				+ "]";
+	}
+	
+	/**
+	 * @return the _id
+	 */
+	public String get_id() {
+		return _id;
 	}
 	/**
-	 * @param id the id to set
+	 * @param _id the _id to set
 	 */
-	public void setId(int id) {
-		this.id = id;
+	public void set_id(String _id) {
+		this._id = _id;
 	}
 	/**
 	 * @return the username

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>File Security System</title>
+    <meta name="description" content="Manage the private files in many clouds.">
+    <meta name="author" content="Sun Xinwei">
+
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+
+    <link rel="stylesheet" type="text/css" href="css/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="lib/jQuery-File-Upload-9.11.2/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="lib/jQuery-File-Upload-9.11.2/css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/system.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="lib/jQuery-File-Upload-9.11.2/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="lib/jQuery-File-Upload-9.11.2/js/jquery.fileupload-jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/json2.js"></script>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/system.js"></script>
+</head>
+<body>
+	<form action="/FSS/rest/filetool/download" method="POST" id="downloadForm">
+		<input id="fileid" name="fileid" type="hidden">
+	</form>
+    <div id="mainbody" class="system_content">
+        <header>
+            <div class="logotitle">
+                <div class="systitle">
+                    <span class="system_title">File Security System</span>
+                </div>
+                <div class="loginpanel">
+                    <span>Welcome, <span class="nickname" id="nickname">ttt</span>&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out logout"></i></span>
+                    <input type="hidden" id="userid" name="userid"/>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <div class="toolpanel">
+            <div class="upload" id="file_upload">
+                <form id="fileupload" method="POST" enctype="multipart/form-data">
+                    <div class="fileupload-buttonbar">
+                        <div class="fileupload-buttons">
+                            <span class="fileinput-button">
+                                <span>Upload files...</span>
+                                <input type="file" name="files[]" multiple>
+                            </span>
+                            <div id="progressbar_div">
+                                <div id="progressbar"><div class="progress-label">Loading...</div></div>
+                            	<label id="showprogress"><span id="nowsize">0</span><span>/</span><span id="totalsize">0</span>&nbsp;&nbsp;&nbsp;<span id="errorup">upload failed..</span></label>
+                            </div>
+                            <div class="clouds_div">
+                            	<input type="checkbox" value="1" name="clouds" checked="checked" id="cloud1"/> <span>AliYun</span>
+                            	<input type="checkbox" value="2" name="clouds" checked="checked" id="cloud2"/> <span>GoogleDrive</span>
+                            	<input type="checkbox" value="3" name="clouds" checked="checked" id="cloud3"/> <span>DropBox</span>
+                            	<input type="checkbox" value="4" name="clouds" checked="checked" id="cloud4"/> <span>AmazonS3</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="content syscontent">
+            <div class="leftpanel">
+                <div class="treeheader"><span>File List</span></div>
+                <div class="filetree">
+                    <div class="filehead">
+                        <span class="sortcap">Sort</span>
+                        <div id="sortfield" class="sortfield">
+                            <input type="radio" id="radio1" name="radio" checked="checked"><label for="radio1">UploadDate</label>
+                            <input type="radio" id="radio2" name="radio"><label for="radio2">FileName</label>
+                        </div>
+                        <div id="sorttype" class="sortfield">
+                            <input type="radio" id="radio3" name="sort" checked="checked"><label for="radio3"><i class="fa fa-sort-desc"></i>DESC</label>
+                            <input type="radio" id="radio4" name="sort"><label for="radio4"><i class="fa fa-sort-asc"></i>ASC</label>
+                        </div>
+                        <hr>
+                    </div>
+                    <ul class="treelist" id="treelist">
+                        <!--No files!-->
+                        <!--<li class="file ext_avi"><a href="javascript:void(0);" rel="a.avi">a.avi<span class="uploaddate">2015-08-09</span></a></li>-->
+                        <!--<li class="file ext_avi"><a href="javascript:void(0);" rel="a.avi">a.avi<span class="uploaddate">2015-08-09</span></a></li>-->
+                        <!--<li class="file ext_avi"><a href="javascript:void(0);" rel="a.avi">a.avi<span class="uploaddate">2015-08-09</span></a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="rightpanel">
+                <div id="tabs">
+                    <ul>
+                        <li id="lwelcome"><a href="#welcome">Welcome</a><span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span></li>
+                        <!--<li><a href="#tab-1">dasd.txt</a><span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span></li>-->
+                    </ul>
+                    <div id="welcome">
+                        Welcome to File Security System!<!-- <span id="hahaha">close</span> -->
+                    </div>
+                    <!--<div id="tab-1">-->
+                        <!--<div class="file_content">-->
+                            <!--<div class="view_file"></div>-->
+                            <!--<table class="file_info">-->
+                                <!--<tr>-->
+                                    <!--<th>file name:</th>-->
+                                    <!--<td>dasd.txt</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<th>file type:</th>-->
+                                    <!--<td>txt</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<th>upload date:</th>-->
+                                    <!--<td>2015-08-02</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td colspan="2">-->
+                                        <!--<hr>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<th rowspan="3">storage cloud:</th>-->
+                                    <!--<td>Ali Cloud</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>Dropbox</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>Huawei</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+                            <!--<hr>-->
+                            <!--<div class="download_div">-->
+                                <!--<input type="hidden" id="tab-1_input" name="fileid" />-->
+                                <!--<button id="tab-1_download" class="download">Download</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

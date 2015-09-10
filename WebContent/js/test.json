@@ -1,0 +1,83 @@
+{
+  "userid": "1",
+  "username": "tanganjie",
+  "nickname": "taj",
+  "filelist":
+  [
+    {
+      "id":"f1",
+      "type":"txt",
+      "filename":"my.txt",
+      "uploadDate":"2015-08-02",
+      "status":"1",
+      "split1":
+      {
+        "cloud":"ali Cloud",
+        "filename":"my.txt.split1",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split2":
+      {
+        "cloud":"Dropbox",
+        "filename":"my.txt.split2",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split3":
+      {
+        "cloud":"Huawei",
+        "filename":"my.txt.split3",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      }
+    },
+    {
+      "id":"f2",
+      "type":"doc",
+      "filename":"my.doc",
+      "uploadDate":"2015-08-03",
+      "status":"1",
+      "split1":
+      {
+        "cloud":"ali Cloud",
+        "filename":"my.doc.split1",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split2":
+      {
+        "cloud":"Dropbox",
+        "filename":"my.doc.split2",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split3":
+      {
+        "cloud":"Huawei",
+        "filename":"my.text.split3",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      }
+    },
+    {
+      "id":"f2",
+      "type":"zip",
+      "filename":"sun.zip",
+      "uploadDate":"2015-08-02",
+      "status":"1",
+      "split1":
+      {
+        "cloud":"ali Cloud",
+        "filename":"sun.zip.split1",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split2":
+      {
+        "cloud":"Dropbox",
+        "filename":"sun.zip.split2",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      },
+      "split3":
+      {
+        "cloud":"Huawei",
+        "filename":"sun.zip.split3",
+        "uploadDatetime":"2015-08-02 20:44:39"
+      }
+    }
+  ]
+}

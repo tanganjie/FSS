@@ -1,0 +1,300 @@
+.system_content{
+    width: 100%;
+}
+.system_title{
+    font-size: 36px;
+    font-weight: bold;
+    color: cadetblue;
+    margin-top: 30px;
+}
+.logotitle{
+    height: 80px;
+    vertical-align: bottom;
+}
+.systitle{
+    padding-top: 20px;
+    padding-left: 50px;
+    float: left;
+}
+hr{
+    color: gray;
+}
+.loginpanel{
+    float: right;
+    padding-right: 100px;
+    padding-top: 40px;
+    font-size: x-large;
+    color: gray;
+}
+.nickname{
+    color: red;
+}
+.filetree {
+    width: 300px;
+    height: 555px;
+    border-radius: 5px;
+    border-top: solid 1px #BBB;
+    border-left: solid 1px #BBB;
+    border-bottom: solid 1px #FFF;
+    border-right: solid 1px #FFF;
+    background: #FFF;
+    overflow: auto;
+    padding: 5px;
+}
+.treeheader{
+    text-align: center;
+    font-family: Arial;
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+}
+.syscontent{
+    overflow:hidden;
+    zoom:1;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+.toolpanel{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-size: 12px;
+}
+.leftpanel{
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.rightpanel{
+    overflow: hidden;
+    zoom: 1;
+    margin-right: 20px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+#tabs{
+    height: 559px;
+    border-radius: 5px;
+    border-top: solid 1px #BBB;
+    border-left: solid 1px #BBB;
+    border-bottom: solid 1px #FFF;
+    border-right: solid 1px #FFF;
+    background: #FFF;
+}
+#tabs li{
+    font-size: 13px;
+}
+#tabs li .ui-icon-close{
+    float: left;
+    margin: 0.4em 0.2em 0 0;
+    cursor: pointer;
+}
+.logout{
+    cursor: pointer;
+}
+
+.uploaddate{
+    float: right;
+    font-size: 10px;
+    color: rgba(175, 175, 175, 0.9);
+}
+
+.treelist{
+    margin-top: 5px;
+}
+#treelist li{
+    margin-top: 8px;
+}
+.sortcap{
+    font-size: 12px;
+    font-weight: bold;
+    color: #222222;
+    float: left;
+    margin-top: 2px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+#file_upload{
+    background-color: #BBBBBB;
+    border-radius: 5px;
+}
+#fileupload{
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#uploadingfile{
+    font-size: 16px;
+    color: black;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.fileupload-buttons{
+}
+.clouds_div{
+	margin-top:5px;
+    font-size: 16px;
+    color: black;
+}
+#progressbar_div{
+    float: right;
+    display: none;
+}
+#errorup{
+	color:red;
+    display: none;
+}
+.ui-progressbar {
+    position: relative;
+    margin-top: 0px;
+}
+#showprogress{
+	color: black;
+}
+.progress-label {
+    position: absolute;
+    left: 44%;
+    top: 2px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+}
+#progressbar{
+    width: 400px;
+    height: 16px;
+    margin-right: 600px;
+}
+.sortfield{
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+#sortfield{
+    float: left;
+}
+.filehead hr{
+    clear: both;
+}
+#sorttype{
+    float: right;
+}
+ul li {
+    list-style: none;
+    padding: 0px;
+    padding-left: 20px;
+    margin: 0px;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+ul A {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 0px 2px;
+}
+
+ul A:hover {
+    background: #BDF;
+}
+
+.view_file{
+    background: url(../images/file.png) no-repeat;
+    background-size: contain;
+    width: 256px;
+    height: 256px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.file_content table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.file_content table th{
+    text-align: right;
+    padding-right: 5px;
+    width: 40%;
+    color: #ff0084;
+}
+.file_content table td{
+    text-align: center;
+    width: 60%;
+    color: black;
+}
+.download{
+}
+.download_div{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+.file_info{
+    width: 60%;
+}
+
+
+LI.directory { background: url(images/directory.png) left top no-repeat; }
+LI.expanded { background: url(images/folder_open.png) left top no-repeat; }
+LI.file { background: url(images/file.png) left top no-repeat; }
+LI.wait { background: url(images/spinner.gif) left top no-repeat; }
+/* File Extensions*/
+LI.ext_3gp { background: url(images/film.png) left top no-repeat; }
+LI.ext_afp { background: url(images/code.png) left top no-repeat; }
+LI.ext_afpa { background: url(images/code.png) left top no-repeat; }
+LI.ext_asp { background: url(images/code.png) left top no-repeat; }
+LI.ext_aspx { background: url(images/code.png) left top no-repeat; }
+LI.ext_avi { background: url(images/film.png) left top no-repeat; }
+LI.ext_bat { background: url(images/application.png) left top no-repeat; }
+LI.ext_bmp { background: url(images/picture.png) left top no-repeat; }
+LI.ext_c { background: url(images/code.png) left top no-repeat; }
+LI.ext_cfm { background: url(images/code.png) left top no-repeat; }
+LI.ext_cgi { background: url(images/code.png) left top no-repeat; }
+LI.ext_com { background: url(images/application.png) left top no-repeat; }
+LI.ext_cpp { background: url(images/code.png) left top no-repeat; }
+LI.ext_css { background: url(images/css.png) left top no-repeat; }
+LI.ext_doc { background: url(images/doc.png) left top no-repeat; }
+LI.ext_exe { background: url(images/application.png) left top no-repeat; }
+LI.ext_gif { background: url(images/picture.png) left top no-repeat; }
+LI.ext_fla { background: url(images/flash.png) left top no-repeat; }
+LI.ext_h { background: url(images/code.png) left top no-repeat; }
+LI.ext_htm { background: url(images/html.png) left top no-repeat; }
+LI.ext_html { background: url(images/html.png) left top no-repeat; }
+LI.ext_jar { background: url(images/java.png) left top no-repeat; }
+LI.ext_jpg { background: url(images/picture.png) left top no-repeat; }
+LI.ext_jpeg { background: url(images/picture.png) left top no-repeat; }
+LI.ext_js { background: url(images/script.png) left top no-repeat; }
+LI.ext_lasso { background: url(images/code.png) left top no-repeat; }
+LI.ext_log { background: url(images/txt.png) left top no-repeat; }
+LI.ext_m4p { background: url(images/music.png) left top no-repeat; }
+LI.ext_mov { background: url(images/film.png) left top no-repeat; }
+LI.ext_mp3 { background: url(images/music.png) left top no-repeat; }
+LI.ext_mp4 { background: url(images/film.png) left top no-repeat; }
+LI.ext_mpg { background: url(images/film.png) left top no-repeat; }
+LI.ext_mpeg { background: url(images/film.png) left top no-repeat; }
+LI.ext_ogg { background: url(images/music.png) left top no-repeat; }
+LI.ext_pcx { background: url(images/picture.png) left top no-repeat; }
+LI.ext_pdf { background: url(images/pdf.png) left top no-repeat; }
+LI.ext_php { background: url(images/php.png) left top no-repeat; }
+LI.ext_png { background: url(images/picture.png) left top no-repeat; }
+LI.ext_ppt { background: url(images/ppt.png) left top no-repeat; }
+LI.ext_psd { background: url(images/psd.png) left top no-repeat; }
+LI.ext_pl { background: url(images/script.png) left top no-repeat; }
+LI.ext_py { background: url(images/script.png) left top no-repeat; }
+LI.ext_rb { background: url(images/ruby.png) left top no-repeat; }
+LI.ext_rbx { background: url(images/ruby.png) left top no-repeat; }
+LI.ext_rhtml { background: url(images/ruby.png) left top no-repeat; }
+LI.ext_rpm { background: url(images/linux.png) left top no-repeat; }
+LI.ext_ruby { background: url(images/ruby.png) left top no-repeat; }
+LI.ext_sql { background: url(images/db.png) left top no-repeat; }
+LI.ext_swf { background: url(images/flash.png) left top no-repeat; }
+LI.ext_tif { background: url(images/picture.png) left top no-repeat; }
+LI.ext_tiff { background: url(images/picture.png) left top no-repeat; }
+LI.ext_txt { background: url(images/txt.png) left top no-repeat; }
+LI.ext_vb { background: url(images/code.png) left top no-repeat; }
+LI.ext_wav { background: url(images/music.png) left top no-repeat; }
+LI.ext_wmv { background: url(images/film.png) left top no-repeat; }
+LI.ext_xls { background: url(images/xls.png) left top no-repeat; }
+LI.ext_xml { background: url(images/code.png) left top no-repeat; }
+LI.ext_zip { background: url(images/zip.png) left top no-repeat; }

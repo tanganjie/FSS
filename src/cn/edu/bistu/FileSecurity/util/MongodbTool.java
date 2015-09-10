@@ -25,8 +25,6 @@ public class MongodbTool {
 		}
 	}
 	
-	
-	//public 
 	public static void main(String[] args) {
 		if(MongodbTool.getMongoClient() == null){
 			logger.info("connect failed");

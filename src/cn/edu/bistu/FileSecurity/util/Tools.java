@@ -12,7 +12,9 @@ public class Tools {
 	
 	public static Properties getProperties() throws IOException{
 		Properties prop = new Properties();
-		InputStream in = Class.class.getResourceAsStream(propFilePath);
+		//String path = Class.class.getResource(propFilePath).getPath();
+		//logger.info("config.properties path: " + path);
+		InputStream in = Tools.class.getResourceAsStream(propFilePath);
 		prop.load(in);
 		return prop;
 	}
